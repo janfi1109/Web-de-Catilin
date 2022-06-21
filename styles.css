@@ -1,0 +1,349 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    height: 100px;
+    background: #4D4D5C;
+    padding: 0 50px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    text-transform: uppercase;
+    color: aquamarine;
+    font-weight: 200;
+}
+.menu a{
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 00.4s;
+}
+.mostrar-menu,
+.esconder-menu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+.mostrar-menu{
+    order: 1;
+}
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover{
+    color: #6cc091;
+}
+#check{
+    display: none;
+}
+
+/*banner*/
+#banner{
+    padding: 0 50px;
+    background-image: url(./Imagenes/Trabajo\ programacion.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+#banner::before{
+    content: "";
+    background: rgba(77,77,92,0.6);
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+}
+.contenido-banner{
+    text-align: center;
+    color: #fff;
+    padding-top: 180px;
+}
+.contenido-banner h1{
+    font-size: 130px;
+    font-family: 'Kaushan Script', cursive;
+}
+.contenido-banner p{
+    font-size: 20px;
+    font-style: italic;
+    font-family: 'Poppins', sans-serif;
+}
+.boton-banner{
+    margin: 70px auto 0;
+}
+.boton-banner a{
+    width: 150px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 0;
+    color: #fff;
+    border: 1px solid #4D4D5C;
+    position: relative;
+    z-index: 1;
+    transition: 0.4s;
+}
+.boton-banner a span{
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: -1;
+    transition: 00.4s;
+}
+.boton-banner a:hover span{
+    width: 100%;
+}
+.boton-banner a:hover{
+    color: black;
+}
+
+/*Blog; Sobre Catilin*/
+#blog{
+    width: 100%;
+    padding: 70px 0;
+    background: #a808a8;
+}
+.title-text{
+    text-align: center;
+    padding-bottom: 70px;
+}
+.title-text p{
+    margin: auto;
+    font-size: 20px;
+    color: #cda4e8;
+    font-weight: bold;
+    position: relative;
+    z-index: -1;
+    display: inline-block;
+}
+
+.title-text h1{
+    font-size: 50px;
+}
+.blog-box{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+.blogs{
+    flex-basis: 50%;
+}
+.blogs-img{
+    flex-basis: 50%;
+    margin: auto;
+}
+.blogs-img img{
+    width: 70%;
+    border-radius: 10px;
+}
+
+
+/*Trabajos*/
+#trabajos{
+    width: 100%;
+    padding: 70px 0;
+    background: #3f0168;
+}
+.trabajos-box{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+.single-trabajos{
+    flex-basis: 48%;
+    text-align: center;
+    border: 7px;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+}
+.single-trabajos img{
+    width: 100%;
+    border-radius: 7px;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    background: linear-gradient(rgba(0,0,0,0.5), #53306a);
+    opacity: 0;
+    transition: 00.4s;
+}
+.single-trabajos:hover .overlay{
+    opacity: 1;
+}
+.trabajo-descripcion{
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: 1s;
+}
+hr{
+    background: #fff;
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 60%;
+}
+.trabajo-descripcion p{
+    font-size: 14px;
+}
+.single-trabajos:hover .trabajo-descripcion{
+    bottom: 40%;
+    opacity: 1;
+}
+
+/*Formulario*/
+#contacto{
+    background: #6cc091;
+    padding: 50px 0;
+    color: #fff;
+}
+#contacto h4{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+#contacto form{
+    max-width: 80%;
+    margin: 0 auto;
+}
+.datos-form{
+    display: flex;
+}
+.datos-form div{
+    padding: 10px;
+    flex: 1;
+}
+form label{
+    display: block;
+    margin-bottom: 10px;
+}
+form input,
+form textarea{
+    background: #6cc091;
+    border-radius: 2px;
+    border: 2px solid #8dcca9;
+    padding: 10px 5px;
+    outline: 0;
+    color: #fff;
+    width: 100%;
+}
+form input:focus,
+form textarea:focus{
+    border-color: #4bae77;
+    box-shadow: 0 0 0 1px #4bae77;
+}
+form input::placeholder,
+form textarea::placeholder{
+    color: #fff;
+}
+.mensaje{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.boton-enviar{
+    display: inline-block;
+    text-decoration: none;
+    color: #6cc091;
+    padding: 10px 30px;
+    border: 3px solid #6cc091;
+    border-radius: 30px;
+    margin-top: 15px;
+    transition: all 0.4s;
+}
+.boton-enviar:hover{
+    background: #6cc091;
+    color: #fff;
+}
+.boton-formulario .boton-enviar{
+    display: block;
+    border: 1px solid #fff;
+    color: #fff;
+    text-align: center;
+    transition: 00.4s;
+}
+.boton-formulario .boton-enviar-mas:hover{
+    background: #4fa776ad;
+}
+
+
+/*Responsive*/
+@media(max-width: 768px){
+    .mostrar-menu,
+    .esconder-menu{
+        display: block;
+    }
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #4D4D5C;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;        
+    }
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+    .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #check:checked ~ .menu{
+        right: 0;
+    }
+    /*formulario*/
+    .datos-form{
+        flex-direction: column;
+    }
+    /*banner*/
+    .boton-banner a{
+        display: block;
+        margin: 20px auto;
+    }
+    .contenido-banner h1{
+        font-size: 44px;
+    }
+    /*trabajos*/
+    .single-trabajos{
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+    .trabajo-descripcion{
+        font-size: 12px;
+    }
+    hr{
+        margin: 5px auto;
+    }
+    .single-trabajos:hover .trabajo-descripcion{
+        bottom: 25%;
+    }
+}
+

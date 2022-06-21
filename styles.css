@@ -18,6 +18,9 @@ header{
     color: aquamarine;
     font-weight: 200;
 }
+.fa-brands{
+    color: #6cc091;
+}
 .menu a{
     color: #fff;
     text-transform: uppercase;

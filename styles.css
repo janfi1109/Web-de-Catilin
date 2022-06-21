@@ -348,5 +348,18 @@ form textarea::placeholder{
     .single-trabajos:hover .trabajo-descripcion{
         bottom: 25%;
     }
+    /*blog*/
+    .title-text h1{
+        font-size: 35px;
+    }
+    .blogs{
+        flex-basis: 100%;
+    }
+    .blogs-img{
+        flex-basis: 100%;
+    }
+    .blogs-img img{
+        width: 100%;
+    }
 }
 
